@@ -1,0 +1,11 @@
+version: '3.8'
+name: roots-cli
+services:
+  api-dev:
+    image: mcr.microsoft.com/devcontainers/typescript-node
+    volumes:
+      - ..:/workspaces/roots:cached
+    command: sleep infinity
+
+volumes:
+  roots-data:

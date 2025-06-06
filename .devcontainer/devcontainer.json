@@ -1,0 +1,29 @@
+{
+  "name": "Existing Docker Compose (Extend)",
+  "dockerComposeFile": [
+    "docker-compose.yml"
+  ],
+  "service": "api-dev",
+  "remoteUser": "root",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "nodeGypDependencies": true,
+      "installYarnUsingApt": true,
+      "version": "lts",
+      "pnpmVersion": "latest",
+      "nvmVersion": "latest"
+    },
+    "ghcr.io/devcontainers-community/npm-features/typescript:1": {
+      "version": "latest"
+    },
+    "ghcr.io/warrenbuckley/codespace-features/sqlite:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "alexcvzz.vscode-sqlite"
+      ]
+    }
+  }
+}
