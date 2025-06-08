@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Expand_aliases 
 shopt -s expand_aliases
