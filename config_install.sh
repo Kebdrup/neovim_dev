@@ -26,11 +26,9 @@ apt install -y npm build-essential
 echo "Installing tree-sitter-cli"
 npm install -g tree-sitter-cli
 
-pwd
-
 # Copy configs
-cp -v -R ./config/* $HOME/.config/ 
-cp -v ./git/.gitconfig ~/
+cp -v -R $HOME/neovim_dev/config/* $HOME/.config/ 
+cp -v $HOME/neovim_dev/git/.gitconfig ~/
 
 # Add bash configs
-./bash/extend_bashrc.sh
+$HOME/neovim_dev/bash/extend_bashrc.sh
