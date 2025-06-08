@@ -4,7 +4,7 @@ install_dir="/nvim"
 
 apt update 
 
-apt install tmux git
+apt install tmux git ripgrep
 
 # If neovim is not installed then install it
 if ! command -v nvim >/dev/null 2>&1

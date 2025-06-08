@@ -1,6 +1,7 @@
 return {
     'nvim-telescope/telescope.nvim',
     event = 'VimEnter',
+    lazy=false,
     dependencies = {
       'nvim-lua/plenary.nvim',
       { -- If encountering errors, see telescope-fzf-native README for installation instructions
@@ -47,12 +48,17 @@ return {
         -- You can put your default mappings / updates / etc. in here
         --  All the info you're looking for is in `:help telescope.setup()`
         --
-        -- defaults = {
-        --   mappings = {
-        --     i = { ['<c-enter>'] = 'to_fuzzy_refine' },
-        --   },
-        -- },
-        -- pickers = {}
+        defaults = {
+          mappings = {
+            i = {
+              ['<C-p>'] = 'move_selection_previous',
+              ['<C-n>'] = 'move_selection_next',
+              ['<C-y>'] = 'file_edit',
+              ['<esc>'] = 'close',
+            },
+          },
+        },
+        --pickers = {}
         extensions = {
           ['ui-select'] = {
             require('telescope.themes').get_dropdown(),
