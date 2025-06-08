@@ -17,14 +17,16 @@ then
 fi
 
 # Create config directory
-root_dir="$HOME/.config/nvim/"
-mkdir -p $root_dir
+config_dir="$HOME/.config"
+mkdir -p $config_dir
 
 # Depedencies for treesitter
 apt install -y npm build-essential
 # apt install -y nodejs # TODO: nodejs should probably be installed another way
 echo "Installing tree-sitter-cli"
 npm install -g tree-sitter-cli
+
+pwd
 
 # Copy configs
 cp -v -R ./config/* $HOME/.config/ 
