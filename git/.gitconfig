@@ -1,0 +1,46 @@
+[user]
+	name = Kristian Ebdrup
+	email = kristian.ebdrup@alexandra.dk
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+	ignorecase = true
+	precomposeunicode = true
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[commit]
+	template = /Users/kristian.ebdrup/.stCommitMsg
+[alias]
+	co = checkout
+	ci = commit
+	st = status
+	diffcs = diff ./**/*.cs
+	unstage = reset HEAD --
+	show-files = show --name-only
+	amend = commit --amend --no-edit
+	cm = commit
+	br = branch --sort=committerdate --column
+	df = diff -w
+[diff]
+	tool = vimdiff
+[pager]
+	branch = false
+[interactive]
+	diffFilter = diff-so-fancy --patch
+[init]
+	defaultBranch = main
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[http]
+  postBuffer = 524288000
+[pull]
+	rebase = false

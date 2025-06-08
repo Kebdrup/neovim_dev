@@ -4,6 +4,8 @@ install_dir="/nvim"
 
 apt update 
 
+apt install tmux git
+
 # If neovim is not installed then install it
 if ! command -v nvim >/dev/null 2>&1
 then
@@ -13,7 +15,6 @@ then
 	(cd $install_dir; ./nvim.appimage --appimage-extract)
 	ln -s $install_dir/squashfs-root/usr/bin/nvim /usr/bin/nvim && ln -s $install_dir/squashfs-root/usr/bin/nvim /usr/bin/vim
 fi
-
 
 # Create config directory
 root_dir="$HOME/.config/nvim/"
@@ -25,5 +26,9 @@ apt install -y npm build-essential
 echo "Installing tree-sitter-cli"
 npm install -g tree-sitter-cli
 
+# Copy configs
+cp -v -R ./config/* $HOME/.config/ 
+cp -v ./git/.gitconfig ~/
 
-cp -v -R ./nvim/* $HOME/.config/nvim/ 
+# Add bash configs
+./bash/extend_bashrc.sh
