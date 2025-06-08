@@ -7,4 +7,5 @@ vim.o.signcolumn = "yes"
 
 vim.keymap.set("n", "<c-[>", "<c-t>")
 vim.keymap.set("n", "<c-o>", "<CMD>Oil --float<CR>", { desc = "Open parent directory" })
+vim.keymap.set("n", "<tab>", "<CMD>nohl<CR>", { desc = "Clear highlights" })
 
