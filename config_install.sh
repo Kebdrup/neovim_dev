@@ -28,7 +28,8 @@ npm install -g tree-sitter-cli
 
 # Copy configs
 cp -v -R $HOME/neovim_dev/config/* $HOME/.config/ 
-cp -v $HOME/neovim_dev/git/.gitconfig ~/
+
+cp -v -a -r $HOME/neovim_dev/git/. $HOME/
 
 # Add bash configs
 $HOME/neovim_dev/bash/extend_bashrc.sh
