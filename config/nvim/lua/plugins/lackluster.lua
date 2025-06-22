@@ -11,7 +11,7 @@ return {
                 -- you can set a value to a custom hexcode like' #aaaa77' (hashtag required)
                 -- or if the value is 'default' or nil it will use lackluster's default color
                 -- lack = "#aaaa77",
-                lack = "default",
+                lack = "#ffffff",
                 luster = "default",
                 orange = "default",
                 yellow = "default",
