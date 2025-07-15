@@ -21,8 +21,34 @@ return {
           NormalNC = { bg = '#000000' },
           NormalFloat = { bg = '#000000' },
         }
+      },
+      specs = {
+        github_dark_high_contrast = {
+          syntax = {
+            bracket = "#ff0000",
+            bultin0 = "#ff0000", -- Camel part of reguar tags
+            bultin1 = "#ffffff", -- Camel part of reguar tags
+            bultin2 = "#0000ff", -- Camel part of reguar tags
+            comment = "#ff0000",
+            conditional = "#ff0000",
+            const = "#ffffff",
+            dep = "#ff0000",
+            field = "#0000ff",
+            func = "#ffffff", -- JSX tags
+            ident = "#0000ff",
+            keyword = "#0000ff",
+            number = "#0000ff",
+            operator = "#0000ff",
+            preproc = "#0000ff",
+            regex = "#0000ff",
+            statement = "#0000ff",
+            string = "#0000ff",
+            type = "#ffffff", -- Camel part of reguar tags
+            variable = "#ff0000"
+          }
+        }
       }
     })
-    vim.cmd.colorscheme("github_dark_high_contrast")
+    -- vim.cmd.colorscheme("github_dark_high_contrast")
   end,
 } 

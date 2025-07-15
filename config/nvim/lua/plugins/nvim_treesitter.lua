@@ -3,12 +3,13 @@ return {
     build = ":TSUpdate",
     config = function ()
       local configs = require("nvim-treesitter")
-
       configs.setup({
-          ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "elixir", "heex", "javascript", "html", 'typescript', 'python' },
+          ensure_installed = { "c", "lua", "vim", "vimdoc", "javascript", "html", 'typescript', 'python', "tsx" },
           sync_install = false,
           highlight = { enable = true },
           indent = { enable = true },
         })
+      vim.treesitter.language.register('tsx', 'typescriptreact')
+      vim.cmd "TSEnable highlight"
     end
  }

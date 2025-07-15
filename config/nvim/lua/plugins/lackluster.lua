@@ -16,7 +16,7 @@ return {
                 orange = "default",
                 yellow = "default",
                 green = "default",
-                blue = "default",
+                blue = "#0000aa",
                 red = "default",
                 -- WARN: Watchout! messing with grays is probs a bad idea, its very easy to shoot yourself in the foot!
                 -- black = "#000000",
@@ -29,6 +29,18 @@ return {
                 -- gray7 = "default",
                 -- gray8 = "default",
                 -- gray9 = "#000000",
+                
+                -- Custom
+                black = "#000000",
+                gray1 = "#000000",
+                gray2 = "#000000",
+                gray3 = "default",
+                gray4 = "#678dc9", -- Attributes info messages
+                gray5 = "#ffffff", -- Tags
+                gray6 = "#aaaaaa", -- Brackets
+                gray7 = "#67c990", -- Export / Import / props values 
+                gray8 = "#ffffff", -- Variables
+                gray9 = "default",
 
             },
             tweak_background = {
