@@ -56,5 +56,8 @@ return {
         vim.cmd.colorscheme("lackluster-hack")
         -- vim.cmd.colorscheme("lackluster-hack") -- my favorite
         -- vim.cmd.colorscheme("lackluster-mint")
+        
+        -- Fix paired bracket highlights
+        vim.api.nvim_set_hl(0, "MatchParen", { fg = "#000000", bg = "#888888" })
     end,
 }
