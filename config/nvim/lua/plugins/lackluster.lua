@@ -53,11 +53,13 @@ return {
                     popup = '#000000',     -- lazy, mason, whichkey ... (bad idea to transparent)
                 },
         })
+
         vim.cmd.colorscheme("lackluster-hack")
         -- vim.cmd.colorscheme("lackluster-hack") -- my favorite
         -- vim.cmd.colorscheme("lackluster-mint")
-        
-        -- Fix paired bracket highlights
+       
+        -- Fix highlight of paired brackets
         vim.api.nvim_set_hl(0, "MatchParen", { fg = "#000000", bg = "#888888" })
+        vim.api.nvim_set_hl(0, "SnippetTabstop", { fg = "#ffffff", bg = "#000000" })
     end,
 }

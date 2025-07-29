@@ -11,4 +11,5 @@ vim.keymap.set("n", "<C-o>", "<CMD>Oil --float<CR>", { desc = "Open parent direc
 vim.keymap.set("n", "<tab>", "<CMD>nohl<CR>", { desc = "Clear highlights" })
 vim.keymap.set("n", "<C-.>", vim.lsp.buf.code_action, { desc = "Show code actions" })
 vim.keymap.set("n", "<C-,>", vim.diagnostic.open_float, { desc = "Show diagnostic float" })
+vim.keymap.set("n", "<F2>", vim.lsp.buf.rename, { desc = "Rename across files" })
 
