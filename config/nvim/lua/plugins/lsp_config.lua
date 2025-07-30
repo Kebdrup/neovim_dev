@@ -9,6 +9,7 @@ return {
         {
             "neovim/nvim-lspconfig",
             config = function()
+                
                 vim.api.nvim_create_autocmd('LspAttach', {
                         group = vim.api.nvim_create_augroup('kickstart-lsp-attach', { clear = true }),
                         callback = function(event)
@@ -144,6 +145,19 @@ return {
                       vim.keymap.set("n", "K", function()
                             vim.lsp.buf.hover { border = "single", max_height = 25, max_width = 120 }
                           end, {})
+
+                     vim.lsp.config('basedpyright', {
+                          settings = {
+                            basedpyright = {
+                              analysis = {
+                                autoSearchPaths = true,
+                                diagnosticMode = "openFilesOnly",
+                                useLibraryCodeForTypes = true
+                              },
+                              typeCheckingMode = "off"
+                            }
+                          }
+                      })
             end
         },
     },
