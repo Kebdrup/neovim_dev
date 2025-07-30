@@ -10,6 +10,7 @@ return {
           indent = { enable = true },
         })
       vim.treesitter.language.register('tsx', 'typescriptreact')
+      vim.api.nvim_set_hl(0, "tsxCloseString", { link = "htmlTag" }) -- Fix green closing tags
       vim.cmd "TSEnable highlight"
     end
  }
