@@ -7,6 +7,14 @@ setup_container() {
   apt update 
   apt install tmux git ripgrep
 
+  # Install python
+  apt install -y python3 python3-venv
+
+  # Install nodejs
+  sudo apt install -y curl
+  curl -fsSL https://deb.nodesource.com/setup_22.x | bash -
+  sudo apt install -y nodejs
+
   # If neovim is not installed then install it
   if ! command -v nvim >/dev/null 2>&1
   then
