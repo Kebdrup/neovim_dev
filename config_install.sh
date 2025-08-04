@@ -11,9 +11,9 @@ setup_container() {
   apt install -y python3 python3-venv
 
   # Install nodejs
-  sudo apt install -y curl
+  apt install -y curl
   curl -fsSL https://deb.nodesource.com/setup_22.x | bash -
-  sudo apt install -y nodejs
+  apt install -y nodejs
 
   # If neovim is not installed then install it
   if ! command -v nvim >/dev/null 2>&1
@@ -27,7 +27,6 @@ setup_container() {
 
   # Depedencies for treesitter
   apt install -y npm build-essential
-  # apt install -y nodejs # TODO: nodejs should probably be installed another way
   echo "Installing tree-sitter-cli"
   npm install -g tree-sitter-cli
 
