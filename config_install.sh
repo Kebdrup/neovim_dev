@@ -5,7 +5,9 @@ install_dir="/nvim"
 setup_container() {
   # Update and install dependencies
   apt update 
-  apt install tmux git ripgrep
+
+  # Install utilities
+  apt install -y tmux git ripgrep
 
   # Install python
   apt install -y python3 python3-venv
