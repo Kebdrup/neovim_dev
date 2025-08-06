@@ -15,6 +15,8 @@ add_alias () {
 
 add_alias 'vsp' 'tmux split-window -v'
 add_alias 'sp' 'tmux split-window -h'
+add_alias 'sizex' 'tmux resize-pane -x'
+add_alias 'sizey' 'tmux resize-pane -y'
 add_alias 'll' 'ls -la'
 
 

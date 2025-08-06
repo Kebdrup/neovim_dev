@@ -11,6 +11,9 @@ vim.o.guicursor = "n-v-c-sm-i-ci-ve:block,r-cr-o:hor20,a:blinkwait700-blinkoff40
 -- No python keymaps
 vim.g.no_python_maps = true
 
+-- Colors in terminal
+vim.opt.termguicolors = true
+
 vim.keymap.set("n", "]]", "<C-]>", { desc = "Jump to tag" })
 vim.keymap.set("n", "[[", "<CMD>pop<CR>", { desc = "Go back a tag" })
 vim.keymap.set("n", "<C-o>", "<CMD>Oil --float<CR>", { desc = "Open parent directory" })

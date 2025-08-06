@@ -7,15 +7,21 @@ setup_container() {
   apt update 
 
   # Install utilities
-  apt install -y tmux git ripgrep
+  apt install -y tmux git ripgrep zsh
+
+  # Install oh-my-zsh
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
   # Install python
   apt install -y python3 python3-venv
 
   # Install nodejs
-  apt install -y curl
-  curl -fsSL https://deb.nodesource.com/setup_22.x | bash -
-  apt install -y nodejs
+  if ! command -v node -v >/dev/null 2>&1
+  then
+    apt install -y curl
+    curl -fsSL https://deb.nodesource.com/setup_22.x | bash -
+    apt install -y nodejs
+  fi
 
   # If neovim is not installed then install it
   if ! command -v nvim >/dev/null 2>&1
@@ -37,7 +43,6 @@ setup_container() {
 
   # Add bash configs
   $HOME/neovim_dev/bash/extend_bashrc.sh
-
 }
 
 remote=false
